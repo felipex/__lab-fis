@@ -1,0 +1,314 @@
+\documentclass[10pt,a4paper,onecolumn,notitlepage]{scrartcl}
+
+%%  Os pacotes da AMS devem ser carregados antes de fontenc e babel (Dica do Uma não tão pequena introdução ao LATEX 2ε)
+\usepackage{amsmath}  
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage[utf8x]{inputenc} % compilando com o lualatex não precisa desta linha. lualatex é unicode por padrão.
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc} % sem esse pacote a hifenização não funciona corretamente com palavras acentuadas.
+\usepackage{ucs}
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage{mathpazo}
+\usepackage{hyperref}
+%\usepackage{layouts}
+%\usepackage{scrpage2}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+
+\usepackage[textheight=24cm]{geometry}
+
+%\renewcommand{\thesection}{\arabic{section}}
+%\numberwithin{equation}{section}
+\newcommand{\refeq}[1]{Equação \eqref{#1}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{}
+\title{Prática 1: Paquímetro}
+
+
+%\thispagestyle{myheadings}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\textsc{Pratica 2: Micrômetro}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%\setcounter{tocdepth}{1} % Profundidade do sumário: 0 - mostra apenas os capítulos.
+
+\begin{document}
+\thispagestyle{myheadings}
+
+\begin{figure}
+\begin{minipage}{0.08\linewidth}
+\includegraphics[scale=0.5]{figuras/brasaoUFC.jpg} 
+\end{minipage}
+\begin{minipage}{0.91\linewidth}
+\textsc{Universidade Federal do Ceará}
+
+Disciplina: EM0016 - Física Experimental para Engenharia
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+%\vspace{0.1cm}
+\centering
+\textsc{Pratica 2: Micrômetro}
+\\
+\hrulefill % usar este comando quando não estiver dentro de uma tabela.
+\end{minipage}
+\end{figure}
+
+\section{Objetivos}
+
+\begin{itemize}
+\item Conhecimento do micrômetro e familiarização com seu uso.
+\end{itemize}
+
+\section{Material}
+
+\setlist[1]{itemsep=-5pt}
+\begin{multicols}{3}
+\begin{itemize}
+\item Micrômetro
+\item Esfera
+\item Tarugo
+\item Folha de papel
+\item Lâmina de barbear
+\item Fios
+\end{itemize}
+\end{multicols}
+
+\section{Fundamentos}
+O micrômetro é um instrumento de medida portátil de boa precisão quando que pode ser usado para medir as dimensões de um objeto. A sua faixa de medição está normalmente restrita a 25 milímetros(mais ou menos uma polega) o que restringe bastante seu uso. A Figura \ref{fig:micro} mostra as várias partes que compõem um micrômetro.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.2]{figuras/micro/micro.png} 
+\caption{Micrômetro}
+\label{fig:micro}
+\end{figure}
+
+\setlist[1]{itemsep=-5pt}
+\begin{multicols}{2}
+\begin{enumerate}
+\item Faces Medição
+\item Batente
+\item Fuso
+\item Bainha
+\item Bucha Interna
+\item Porca de Ajuste
+\item Arco
+\item Isolante Térmico
+\item Trava
+\item Linha de Referência
+\item Tambor
+\item Catraca
+\end{enumerate}
+\end{multicols}
+
+\subsection{Princípio de Funcionamento do Micrômetro}
+O princípio de funcionamento do micrômetro é semelhante ao sistema parafuso porca como pode ser visto na Figura \ref{fig:passo}. Cada volta do parafuso corresponde ao avanço de um passo, dividindo-se a cabeça do parafuso pode-se avaliar frações menores que as dos passo do parafuso.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.15]{figuras/micro/passo.png} 
+\caption{Passo do micrômetro}
+\label{fig:passo}
+\end{figure}
+
+\subsection{Resolução do Micrômetro}
+A resolução nos micrômetros pode ser de $0,01mm$; $0,001mm$; $0.001"$ ou $0.0001"$. No micrômetro de $0$ a $25mm$ ou de $0$ a $1"$, quando as faces dos contatos estão juntas, a borda do tambor coincide com o traço zero (0) da bainha. A linha longitudinal, gravada na bainha, coincide com o zero (0) da escala do tambor.
+
+A cada volta do tambor, o fuso do micrômetro avança a distância de um passo e a resolução de um micrômetro corresponde ao menor deslocamento de seu fuso. Para obter a medida, divide-se o passo pelo número de divisões do tambor.
+
+
+\[
+\text{Resolução} = \frac{\text{passo da rosca do fuso micrométrico}}{\text{número de divisões do tambor}}
+\]
+
+\textbf{Exemplo:} Para um micrômetro com passo da rosca igual a $0,5mm$ e número de divisões do tambor igual $50$ temos:
+
+\[
+\text{Resolução} = \frac{\text{passo da rosca do fuso micrométrico}}{\text{número de divisões do tambor}}=\frac{0,5mm}{50}= 0,01mm
+\]
+ 
+\subsection{Medindo com um micrômetro}
+
+A leitura dos valores em um micrômetro consiste basicamente de três passos:
+\begin{description}
+\item[1o. passo -] leitura dos milímetros inteiros na escala da bainha.
+\item[2o. passo -] leitura dos meios milímetros, também na escala da bainha.
+\item[3o. passo -] leitura dos centésimos de milímetro na escala do tambor.
+\end{description}
+Ao final soma-se os valores encontrados em cada um dos passos indicados. Veja o exemplo na Figura \ref{fig:leitura} para a leitura em um micrômetro com resolução de $0,01mm$.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3]{figuras/micro/leitura.png} 
+\caption{Leitura em um micrômetro com resolução de $0,01mm$}
+\label{fig:leitura}
+\end{figure}
+
+Na Figura \ref{fig:leitura} temos:
+\[
+\begin{matrix}
+& 17,00mm & \text{(escala dos milímetros da bainha)}\\
++ & 0,50mm & \text{(escala dos meio milímetros da bainha)}\\
+& 0,32mm & \text{(escala centesimal do tambor)}\\
+\hline
+& 17,82mm
+\end{matrix}
+\]
+
+\textbf{OBS.:} Em geral não se usa estimar os milésimos de milímetro, entretanto para medidas menores do que $0,10mm$ isto se faz necessário para evitar que a medida fique com somente um algarismo significativo.
+
+\section{Pré-laboratório}
+Faça as leituras das figuras abaixo.
+
+\begin{figure}[H]
+\label{fig:prelab}
+\centering
+\begin{minipage}{\linewidth}
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=0.2]{figuras/micro/ex1.png} 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=0.2]{figuras/micro/ex2.png} 
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\vspace{0.5cm}
+Leitura:\rule{3cm}{0.4pt}
+\vspace{1cm}
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+\vspace{0.5cm}
+Leitura:\rule{3cm}{0.4pt}
+\vspace{1cm}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=0.2]{figuras/micro/ex3.png} 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=0.2]{figuras/micro/ex4.png} 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\vspace{0.5cm}
+Leitura:\rule{3cm}{0.4pt}
+\vspace{1cm}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\vspace{0.5cm}
+Leitura:\rule{3cm}{0.4pt}
+\vspace{1cm}
+\end{minipage}
+\end{minipage}
+\end{figure}
+
+
+\section{Procedimento}
+OBS.: Antes de você fazer esta prática é conveniente conhecer o conteúdo do texto sobre \emph{Algarismos Significativos}. O aluno que não observar as regras sobre Algarismos Significativos em seus relatórios será penalizado.
+
+Utilizando o cálculo do \emph{valor médio}, em que o número de termos  é o mesmo dos números componentes da equipe, como uso do paquímetro, determine:
+
+\subsection{Cálulos de Volume, diâmetros e espessuras}
+\subsubsection{O volume da esfera em $mm^3$. Utilize os cálculos dos valores médios obtidos.} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|*{4}{c|}}
+\hline & Medida 1& Medida 2& Medida 3& Média \\
+\hline Diâmetro(mm)& & &  & \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{10cm}|}
+\hline Cálculo do Volume \\ 
+\\
+\\
+\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Calcule,  da  mesma  maneira,  a  área  das  seções  retas  dos  fios  apresentados}
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|*{4}{c|}}
+\hline & Medida 1& Medida 2& Medida 3& Média \\
+\hline Diâmetro do fio 1(mm)& & &  & \\ 
+\hline Diâmetro do fio 2(mm)& & &  & \\ 
+\hline Diâmetro do fio 3(mm)& & &  & \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{10cm}|}
+\hline Cálculo das seções retas \\ 
+\\
+\\
+\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Meça o diâmetro do tarugo} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|*{4}{c|}}
+\hline & Medida 1& Medida 2& Medida 3& Média \\
+\hline Diâmetro(mm)& & &  & \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Meça a espessura de um fio de cabelo} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|*{4}{c|}}
+\hline & Medida 1& Medida 2& Medida 3& Média \\
+\hline Espessura(mm)& & &  & \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Meça a espessura desta folha de papel} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|*{4}{c|}}
+\hline & Medida 1& Medida 2& Medida 3& Média \\
+\hline Espessura(mm)& & &  & \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Meça a espessura de uma lâmina de barbear} 
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|*{4}{c|}}
+\hline & Medida 1& Medida 2& Medida 3& Média \\
+\hline Espessura(mm)& & &  & \\ 
+\hline
+\end{tabular}
+\end{table}
+
+\section{Questionário}
+\begin{enumerate}
+\item Qual  o  instrumento  de  maior  precisão:  o  paquímetro utilizado na Prática 1 ou  o  micrômetro desta prática?  Justifique.
+\item Indique  algum  outro  método  que  também  permita  determinar  o  volume  da  esfera.  (Tema  livre).
+\item De um modo geral, ao medir com um micrômetro,  quais  as  causas  mais  prováveis  de  erro?
+\item Determine  a  precisão  de  um  micrômetro  cujas  características  são:  tambor  dividido  em  50  partes  iguais  e  passo  de  $0,25mm$.
+\end{enumerate}
+
+\end{document}

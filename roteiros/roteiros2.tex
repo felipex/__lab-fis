@@ -1,0 +1,66 @@
+\documentclass[10pt,a4paper,onecolumn,notitlepage]{scrartcl}
+
+%%  Os pacotes da AMS devem ser carregados antes de fontenc e babel (Dica do Uma não tão pequena introdução ao LATEX 2ε)
+\usepackage{amsmath}  
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%\usepackage[utf8x]{inputenc} % compilando com o lualatex não precisa desta linha. lualatex é unicode por padrão.
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc} % sem esse pacote a hifenização não funciona corretamente com palavras acentuadas.
+\usepackage{ucs}
+%\usepackage{draftwatermark}\SetWatermarkScale{1}
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage{mathpazo}
+\usepackage{fancyhdr}
+%\usepackage[Sonny]{fncychap}
+\usepackage{hyperref}
+%\usepackage{layouts}
+%\usepackage{scrpage2}
+\usepackage{tikz}
+%\usepackage{sagetex}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{enumitem}
+
+\renewcommand{\thesection}{\arabic{section}}
+%\numberwithin{equation}{section}
+\newcommand{\refeq}[1]{Equação \eqref{#1}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{Mário Pacheco}
+\title{Roteiros dos Experimentos de Laboratório de Física Básica}
+
+%\setcounter{tocdepth}{1} % Profundidade do sumário: 0 - mostra apenas os capítulos.
+
+\pagestyle{fancy}
+\makeatletter
+%\renewcommand{\@chapapp}{Prática}
+\makeatother
+
+%\usepackage{graphics}
+%\usepackage{titlesec}
+%\titleformat{\chapter}[display]
+%  {\normalfont\Large\raggedleft}
+%  {\MakeUppercase{\chaptertitlename}%
+%    \rlap{ \resizebox{!}{1.5cm}{\thechapter} \rule{5cm}{1.5cm}}}
+%  {10pt}{\Huge}
+%\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
+\begin{document}
+
+%\include{capa}
+
+%\tableofcontents
+%\listoffigures
+%\listoftables
+
+%\input{introducao}
+%\input{algsig}
+\input{paquimetro2}
+%\input{mru-mrua}
+%\input{referencias}
+
+
+\end{document}

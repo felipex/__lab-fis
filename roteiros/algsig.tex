@@ -1,0 +1,117 @@
+\documentclass[10pt,a4paper,onecolumn,notitlepage]{scrartcl}
+
+%%  Os pacotes da AMS devem ser carregados antes de fontenc e babel (Dica do Uma não tão pequena introdução ao LATEX 2ε)
+\usepackage{amsmath}  
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage[utf8x]{inputenc} % compilando com o lualatex não precisa desta linha. lualatex é unicode por padrão.
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc} % sem esse pacote a hifenização não funciona corretamente com palavras acentuadas.
+\usepackage{ucs}
+\usepackage{graphicx}
+%\usepackage{wrapfig}
+\usepackage{mathpazo}
+\usepackage{hyperref}
+%\usepackage{layouts}
+%\usepackage{scrpage2}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+
+\usepackage[textheight=24cm]{geometry}
+
+%\renewcommand{\thesection}{\arabic{section}}
+%\numberwithin{equation}{section}
+\newcommand{\refeq}[1]{Equação \eqref{#1}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\author{}
+\title{Prática 1: Paquímetro}
+
+
+%\thispagestyle{myheadings}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\textsc{Pratica 1: Paquímetro}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+%\setcounter{tocdepth}{1} % Profundidade do sumário: 0 - mostra apenas os capítulos.
+
+\begin{document}
+\thispagestyle{myheadings}
+
+\begin{figure}
+\begin{minipage}{0.08\linewidth}
+\includegraphics[scale=0.5]{figuras/brasaoUFC.jpg} 
+\end{minipage}
+\begin{minipage}{0.91\linewidth}
+\textsc{Universidade Federal do Ceará}
+
+Disciplina: EM0016 - Física Experimental para Engenharia
+\end{minipage}
+
+\begin{minipage}{\linewidth}
+%\vspace{0.1cm}
+\centering
+\textsc{Algarismos Significativos e Erros}
+\\
+\hrulefill % usar este comando quando não estiver dentro de uma tabela.
+\end{minipage}
+\end{figure}
+
+\section{Algarismos Significativos e Erros}
+Medir uma grandeza significa compará-la com outra de mesma espécie e verificar quantas vezes a primeira é menor ou maior do que esta.
+
+Em geral, a precisão de uma medida é determinada pelo instrumento através do qual a medida é realizada e pela habilidade da pessoa que a realiza. Ao fazermos uma medida, devemos expressá-la de maneira que o resultado represente o melhor possível a grandeza medida. Por exemplo, ao medirmos o comprimento mostrado na Figura 1 com uma régua graduada em centímetros verificamos que o mesmo tem com certeza mais de $14cm$. Podemos estimar também que além dos $14cm$ temos mais uns $3mm$. Dizemos, então que o comprimento médido é $14,3cm$. Observe que nesta medida os algarismos 1 e 4 são exatos enquanto que o 3 foi estimado, sendo, portanto um algarismo duvidoso. Por que, então não expressamos o comprimento somente com  os algarismos corretos? A resposta é que $14,3$ dá uma melhor ideia do comprimento medido do que simplesmente $14cm$. Temos, então, 3 algarismos significativos.
+
+Na Figura 2 podemos dizer que o valor medido é $14,35cm$, sendo os algarismos $1,4$ e $3$ todos corretos e o algarismo $5$ estimado. Neste caso temos uma medida com quatro algarismos significativos.
+
+\textbf{Em uma medida, chamamos de algarismos significativos, todos os algarismos corretos mais o primeiro duvidoso.}
+
+O algarismo duvidoso surge sempre ao estimarmos uma fração da menor divisão da escala do aparelho de medida.
+
+\subsection{Operações com Algarismos Significativos}
+
+\subsubsection{Soma e/ou Subtração}
+\begin{itemize}
+\item Algarismo correto $\pm$ algarismo correto = algarismo correto
+\item Algarismo correto $\pm$ algarismo duvidoso = algarismo duvidoso
+\item Algarismo duvidoso $\pm$ algarismo duvidoso = algarismo duvidoso
+\end{itemize} 
+
+Exemplo 1: Os lados de um triângulo foram medidos por instrumentos diferentes. Obteve-se os seguintes valores: $15,31cm$, $8,752cm$ e $17,7cm$. Calcule o perímetro.
+
+\[
+\begin{array}{rrlll}
+& 15, & \!\!\!\!\!\!3\underline{1} &\\
++ & 8, & \!\!\!\!\!\!75\underline{2} & \text{* Os algarismos sublinhados são os algarismos duvidosos.}\\
+& 17, & \!\!\!\!\!\!\underline{7}  & \\
+\hline
+& 41, & \!\!\!\!\!\!\underline{762} &
+\end{array}
+\]
+
+O resultado deve conter apenas uma algarismo duvidoso; portanto $41,8cm$. (Observer a regra do arredondamento: \textbf{Se o algarismo à direita do menor Algarismo Significativo na resposta final é 4 ou menor, o valor é arredondado para baixo. Se o algarismo à direita do menor Algarismo Significativo na resposta final é 5 ou maior, o valor é arredondado para cima}).
+
+O menor algarismo significativo de um número é aquele mais à direita.
+
+Exemplo 2: Subtraia $46,7g$ de $96g$.
+
+\[
+\begin{array}{rrlll}
+& 9\underline{6} &  &\\
++ & 46, & \!\!\!\!\!\!\underline{7} & \text{* Os algarismos sublinhados são os algarismos duvidosos.}\\
+\hline
+& 4\underline{9}, & \!\!\!\!\!\!\underline{3} &
+\end{array}
+\]
+
+
+
+\end{document}
